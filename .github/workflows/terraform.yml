@@ -1,0 +1,17 @@
+name: Terraform AKS Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Trigger Terraform Cloud Run
+        run: echo "Code pushed - Terraform Cloud will execute automatically"
